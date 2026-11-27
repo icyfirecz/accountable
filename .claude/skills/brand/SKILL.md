@@ -1,3 +1,7 @@
+---
+name: brand
+description: Accountables fonts, colors and tone. Use for any UI work.
+---
 # Brand
 
 ## Fonts
