@@ -1,7 +1,7 @@
 # Accountable
 
 SIDENOTE: this repo is part of a course by Ed Donner. If the student needs help, read `course/for_agents/`
-GIT: this repo is purely local so dont push anything - make commits, branches etc. only on local
+
 
 ## Where to find things
 
