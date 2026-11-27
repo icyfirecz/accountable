@@ -21,6 +21,7 @@ All concerns below were reviewed and agreed on 2026-11-27. Concern 10 was change
 11. **What "late" means.** *Call:* an open deal (not Won or Lost) whose close date is before today, by the computer's local date.
 12. **Pagination with search and sort.** With about 40 deals, everything fits in the browser. *Call:* tables load all rows and search, sort and page in the browser. This needs revisiting once the data grows.
 13. **Reset while running.** `npm run seed` while `npm run dev` is up could leave the open page showing stale data. *Call:* the seed replaces the database contents in one transaction, and the page shows the new data after a refresh. This is documented in `STATUS.md`.
+15. **Won and Lost columns would grow without limit.** The dashboard counts about 50 won deals a year, so showing them all makes the column very long. *Call:* the Won and Lost columns show only deals closed in the last 30 days, and their count, total and expected revenue cover only those deals. Older ones are on the Deals page. Their headers say "last 30 days". Agreed on 2026-11-27, after mockup C was chosen.
 14. **Still open from the interview:** whether tables remember their search, sort and page when you leave and come back. *Call for now:* they don't, and every visit starts fresh.
 
 ## Requirements
@@ -132,7 +133,7 @@ Default probabilities: New 10, Qualified 25, Proposal 50, Negotiation 75, Won 10
 
 ### Pipeline
 
-- R29. One column per stage, in order: New, Qualified, Proposal, Negotiation, Won, Lost. Each column header shows the count, total value and expected revenue for that column.
+- R29. One column per stage, in order: New, Qualified, Proposal, Negotiation, Won, Lost. Each column header shows the count, total value and expected revenue for that column. The Won and Lost columns show only deals closed in the last 30 days (concern 15), and their header figures cover only those deals.
 - R30. Above the board: total value and expected revenue of open deals (New through Negotiation).
 - R31. Cards show deal name, organization, value, probability, close date and main contact. Late cards get the Raspberry badge.
 - R32. Dragging a card to any place in any column moves it there. The board updates at once (optimistic) and saves in the background. If saving fails, the card goes back and a message says so.
