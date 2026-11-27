@@ -206,7 +206,9 @@ Errors return `{"detail": "...", "fields": {...}}` with 400 for validation, 404,
 
 ### Screens and layout
 
-- A fixed left sidebar, 240px wide, on a white panel. It shows the Accountable wordmark and five links (Dashboard, Organizations, Contacts, Deals, Pipeline), each with a lucide icon, and the current page in Sea Green fill with Midnight text.
+- **Chosen look: mockup C** (`docs/mockups/c-dashboard.html` and `c-pipeline.html`, with screenshots beside them), chosen on 2026-11-27 over mockups A and B. Where this spec and mockup C differ on looks, the mockup wins. On behavior, the spec wins.
+- A fixed left sidebar, 224px wide, filled Midnight, with Sea Mist link text. It shows the Accountable wordmark and five links (Dashboard, Organizations, Contacts, Deals, Pipeline), each with a lucide icon, and the current page in Sea Green fill with Midnight text. The page itself stays on the light background.
+- Pipeline: three summary tiles above the board (open pipeline in Sea Green, expected revenue in Marigold, late deals in Coral). Each column has a header filled with its stage color showing the stage name and card count, then the column's value and expected revenue. A card being dragged lifts with a shadow, and the spot where it will land shows as a light Sea Green block.
 - Content sits on the page background with a page title (Instrument Sans, 28px, semibold) and the main action at top right.
 - Tables, record details, timelines and chart blocks each sit in a white panel with 12px rounding, no outline, and a soft shadow. There are no one-edge borders and no rule across the top of the page.
 - Forms open in a side panel from the right, 480px wide. Confirmations are centered dialogs.
@@ -267,8 +269,8 @@ Charts use flat fills with no gradients. The line chart gets one light Sea Green
 ### Dashboard layout
 
 1. Title "Dashboard" with the Instrument Serif accent line beneath it.
-2. A row of four summary tiles: figure in JetBrains Mono, label, and change versus last month.
-3. A two-column row: the revenue-won line chart, wide, and the funnel.
+2. A row of four summary tiles filled with brand colors: Sea Green, Marigold and Coral with Midnight text, Cerulean with white text. Each has the figure in JetBrains Mono, a label, and the change versus last month.
+3. A two-column row: the revenue-won line chart, wide, and the funnel drawn as a tapered stack with each stage in its stage color.
 4. A two-column row: the deals-won bar chart and the follow-ups list.
 5. Recent activity, full width.
 
