@@ -7,6 +7,18 @@ The frontend gets its data from the backend's JSON API. The backend keeps the da
 
 Prefer popular, well-supported libraries to custom code, such as for the data tables, the charts and the drag-and-drop pipeline. Don't hand-roll what a mature library does well.
 
+Chosen libraries:
+
+- Frontend: React Router, TanStack Query, TanStack Table, React Hook Form with Zod, Recharts, dnd-kit, Radix UI, date-fns, lucide-react, `@fontsource` fonts
+- Backend: FastAPI, SQLAlchemy Core, Pydantic, Uvicorn
+- Tooling: concurrently, Vitest with Testing Library, pytest with httpx
+
+Nothing loads from the internet at runtime: fonts, icons and libraries are bundled.
+
+Vite serves on port 5173 and proxies `/api` to FastAPI on port 8000. The database is `backend/data/accountable.db`, ignored by git, and tests set their own path with an environment variable.
+
+Prerequisites: Node 24 or later, uv, and Google Chrome. Internet is needed only for the first `npm install` and `uv sync`, when uv also fetches Python 3.12.
+
 For now it runs locally. Later, Supabase will provide sign-in and the database, and the app will be deployed to Render.
 
 Commands are npm scripts in a `package.json` at the repo root, with `frontend/` as an npm workspace, so they work the same on Mac, Linux and Windows:

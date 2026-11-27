@@ -32,9 +32,9 @@ From any contact or deal you can log an activity (a note, call or email) and giv
 - **Organization**: a company we do business with. Name, website, industry and notes. An organization has many contacts and many deals.
 - **Contact**: a person we deal with. Name, email, phone, job title, the organization they belong to, and a status (lead, qualified or customer). A lead is a contact with the lead status, so there's no separate list of leads.
 - **Deal**: a potential sale. Name, the organization and the main contact it is with, its stage (New, Qualified, Proposal, Negotiation, Won or Lost), its value in US dollars, its probability of close, its expected or actual close date, and for a lost deal an optional free-text reason. Each stage has a usual probability of close: New 10%, Qualified 25%, Proposal 50%, Negotiation 75%, Won 100% and Lost 0%. A deal takes its new stage's probability when it moves; a probability set by hand is kept until the stage changes. The loss reason is shown in the deal's details and in its "Moved to Lost" timeline entry.
+- **Activity**: something that happened, or needs to happen, with a contact or deal. Type (note, call or email), the contact or deal it relates to, a description and when it happened, and optionally a follow-up date and whether it's done.
 
 When adding a record, these are required and everything else is optional: an organization needs a name; a contact needs a name and an organization; a deal needs a name, an organization, a value and a stage.
-- **Activity**: something that happened, or needs to happen, with a contact or deal. Type (note, call or email), the contact or deal it relates to, a description and when it happened, and optionally a follow-up date and whether it's done.
 
 ### Sample data
 
